@@ -1,0 +1,164 @@
+/* Root variables for colors */
+:root {
+    --primary-color: #0A2E36;
+    --secondary-color: #FF6700;
+    --accent1-color: #808782;
+    --accent2-color: #FCF7FF;
+}
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+    background-color: var(--accent2-color);
+}
+
+h1, h2 {
+    font-family: 'Lora', serif;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+p {
+    color: var(--accent1-color);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Limit page width */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+header img {
+    height: 50px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(10, 46, 54, 0.9);
+    color: var(--accent2-color);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.hero article img {
+    float: right;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+/* Section Styling */
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+section img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* Social Media Styling */
+footer .sociallinks a {
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+footer .sociallinks img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+footer .sociallinks img:hover {
+    filter: grayscale(0%);
+}
