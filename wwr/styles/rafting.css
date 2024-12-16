@@ -37,30 +37,79 @@ main {
 }
 
 /* Header */
-header {
+/* header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     background-color: var(--primary-color);
     color: white;
+} */
+
+/* Header with CSS Grid */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Logo on the left, nav on the right */
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+/* Logo */
 header img {
     height: 50px;
+    width: auto;
+    grid-column: 1;
+    object-fit: contain; /* Ensures logo keeps its aspect ratio */
+}
+
+/* Navigation using Flexbox */
+header nav {
+    display: flex;
+    justify-content: flex-end; /* Aligns navigation items to the right */
+    grid-column: 2;
 }
 
 header nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    margin: 0 15px;
-    font-size: 16px;
+    margin: 0 20px; /* Spacing between nav links */
+    font-size: 18px;
+    letter-spacing: 1px; /* Adds a little space between letters */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effect */
 }
 
 header nav a:hover {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Changes color on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
 }
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    /* Stack logo and nav items vertically on smaller screens */
+    header {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+        text-align: center; /* Center-align content */
+    }
+
+    header img {
+        margin-bottom: 10px; /* Space between logo and nav links */
+    }
+
+    header nav {
+        justify-content: center; /* Center the nav items */
+        margin-top: 10px; /* Add space between logo and nav */
+    }
+
+    header nav a {
+        margin: 0 10px; /* Reduced space between links */
+        font-size: 16px; /* Slightly smaller font on mobile */
+    }
+}
+
 
 /* Hero Section */
 .hero {
@@ -108,49 +157,121 @@ header nav a:hover {
     margin-left: 20px;
 }
 
-/* Section Styling */
-section {
-    padding: 40px;
+/* History Section Styling */
+#history {
     text-align: center;
+    padding: 40px;
+    background-color: var(--accent2-color);
 }
 
-section h2 {
+#history h2 {
     font-size: 32px;
+    color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
-section p {
-    max-width: 800px;
-    margin: 0 auto 20px;
+.history-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Space between elements */
+    margin-top: 20px;
 }
 
-section img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+.history-text {
+    flex: 1; /* Equal width for text blocks */
+    text-align: left;
+    font-size: 16px;
+    color: var(--accent1-color);
+    line-height: 1.6;
+}
+
+.history-image {
+    flex: 0 0 200px; /* Fixed width for the image container */
+    text-align: center;
+}
+
+.history-image img {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-    margin: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
+
+/* Adventure Section Styling */
+#adventures {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--accent2-color);
+}
+
+#adventures h2 {
+    font-size: 32px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+/* Gallery Layout */
+.adventure-gallery {
+    display: flex; /* Flexbox layout for horizontal alignment */
+    justify-content: space-between; /* Space evenly between images */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 20px; /* Space between images */
+}
+
+.adventure-gallery figure {
+    flex: 1; /* Ensures equal spacing for each figure */
+    text-align: center; /* Center-aligns content in the figure */
+    margin: 0;
+}
+
+.adventure-gallery img {
+    width: 100%; /* Makes images responsive to container */
+    max-width: 200px; /* Ensures a maximum size for the images */
+    height: 150px; /* Fixed height for consistent layout */
+    object-fit: cover; /* Maintains image proportions */
+    border-radius: 10px; /* Rounded corners for images */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.adventure-gallery img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.adventure-gallery figcaption {
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
 footer {
     background-color: var(--primary-color);
     color: white;
-    text-align: center;
-    padding: 20px;
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Content at both ends */
+    align-items: center; /* Vertically centers content */
+    padding: 20px 40px; /* Adds spacing around content */
     margin-top: 40px;
+    flex-wrap: wrap; /* Ensures responsiveness */
 }
 
 footer p {
+    margin: 0;
     font-size: 14px;
-    margin: 10px 0;
 }
 
-/* Social Media Styling */
+footer .sociallinks {
+    display: flex; /* Makes the social links horizontal */
+    gap: 20px; /* Adds space between icons */
+}
+
 footer .sociallinks a {
-    margin: 0 10px;
-    display: inline-block;
+    display: inline-block; /* Ensures the anchor tag wraps only the image */
     text-decoration: none;
 }
 
@@ -159,9 +280,24 @@ footer .sociallinks img {
     height: 30px;
     object-fit: cover;
     filter: grayscale(100%);
-    transition: filter 0.3s;
+    transition: filter 0.3s, transform 0.3s ease; /* Smooth hover effect */
 }
 
 footer .sociallinks img:hover {
     filter: grayscale(0%);
+    transform: scale(1.1); /* Slight zoom effect */
 }
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center-aligns content */
+    }
+
+    footer .sociallinks {
+        justify-content: center; /* Centers the social links */
+        margin-top: 10px; /* Adds space above social icons */
+    }
+}
+
