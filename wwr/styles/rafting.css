@@ -448,6 +448,15 @@ footer .sociallinks img:hover {
     background-color: #3498db;
 }
 
+/* Styling for the iframe within the map container */
+.map-container iframe {
+    border: 1px solid #ccc; /* Adds a border to the iframe */
+    width: 100%; /* Makes the iframe responsive to fit its container */
+    height: 300px; /* Sets a fixed height for the iframe */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better aesthetics */
+}
+
 /* Footer */
 footer {
     text-align: center;
