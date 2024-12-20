@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iRaft - Home</title>
+    <meta name="description" content="Experience thrilling white water rafting adventures with iRaft. Your journey to excitement begins here.">
+    <meta name="author" content="Emmanuel Uko">
+    <link rel="stylesheet" href="styles/rafting.css">
+    <!-- Google Font API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="iRaft Logo">
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <img src="../wwr/images/rafting.png" alt="Rafting adventure scenery">
+            <h1>Experience the Thrill of White Water Rafting</h1>
+        </section>
+    
+        <!-- Introduction Section -->
+        <section id="contact-intro">
+            <h1>Contact Us</h1>
+            <p>We’re here to help! Reach out to us for any questions, reservations, or feedback about our rafting services.</p>
+        </section>
+    
+
+        <!-- Newsletter Sign-Up -->
+        <section id="newsletter">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for the latest updates and offers:</p>
+            <form action="subscribe.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="cta">
+            <h2>Plan Your Next Adventure</h2>
+            <p>Discover exciting rafting trips tailored just for you.</p>
+            <a href="trips.html" class="btn">Explore Trips</a>
+        </section>
+
+        <!-- About Section with Grid Layout -->
+        <section id="about">
+            <h2>Why Choose iRaft?</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="images/rafting1.jpg" alt="Adventure Image">
+                    <h3>Unforgettable Adventures</h3>
+                    <p>Our rafting experiences are designed to thrill and delight adventurers of all levels.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/rafting2.jpg" alt="Safety First">
+                    <h3>Safety First</h3>
+                    <p>With trained guides and high-quality equipment, your safety is our top priority.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/rafting3.jpg" alt="Nature">
+                    <h3>Immerse in Nature</h3>
+                    <p>Enjoy the beauty of untouched rivers and stunning landscapes.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©2024 iRaft ✨ Emmanuel Uko ✨</p>
+        <nav class="sociallinks">
+            <a href="https://facebook.com">
+                <img src="images/logo-facebook.webp" alt="Facebook">
+            </a>
+            <a href="https://twitter.com">
+                <img src="images/Twitter.webp" alt="Twitter">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/Instagram.webp" alt="Instagram">
+            </a>
+        </nav>
+    </footer>
+</body>
+</html>
