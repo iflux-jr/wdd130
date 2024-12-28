@@ -29,6 +29,7 @@ p {
     line-height: 1.6;
 }
 
+
 /* Limit page width */
 main {
     max-width: 1200px;
@@ -186,6 +187,10 @@ header nav a:hover {
     line-height: 1.6;
 }
 
+.history-text p {
+    color: var(--primary-color);
+}
+
 .history-image {
     flex: 0 0 200px; /* Fixed width for the image container */
     text-align: center;
@@ -305,6 +310,7 @@ footer .sociallinks img:hover {
 #contact-intro {
     text-align: center;
     margin-bottom: 2rem;
+    font-size: 1.5rem;
 }
 
 #contact-intro p {
@@ -327,6 +333,7 @@ footer .sociallinks img:hover {
 
 #contact-info p {
     margin: 0.5rem 0;
+    color: var(--primary-color);
 }
 
 .map-container iframe {
@@ -369,6 +376,7 @@ footer .sociallinks img:hover {
 #team .employee p {
     margin: 0;
     font-size: 1rem;
+    color: var(--primary-color);
 }
 
 /* Contact Form Section */
